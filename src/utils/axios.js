@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5000/"
+  baseURL: import.meta.env.VITE_AXIOS_BASE_URL
 })
 
 axiosInstance.defaults.withCredentials = true;
