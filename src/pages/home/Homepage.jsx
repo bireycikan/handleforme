@@ -18,7 +18,7 @@ import CreateTask from "@/components/tasks/CreateTask"
 function Homepage() {
   const navigate = useNavigate();
   const { logIn, setUserInfo } = useContext(UserContext);
-  const { data, isPending, error } = useFetch('http://localhost:5000/api/task/list');
+  const { data, isPending, error } = useFetch(`${import.meta.env.VITE_AXIOS_BASE_URL}/api/task/list`);
   const [sortPrice, setSortPrice] = useState('asc');
   const [minDate, setMinDate] = useState(0)
   const [maxDate, setMaxDate] = useState(0)
