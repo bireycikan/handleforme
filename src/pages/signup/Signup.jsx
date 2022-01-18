@@ -89,6 +89,9 @@ function Signup() {
       else if (code === "LIMIT_FILE_SIZE") {
         setError('File size is higher than limits! Please upload a profile photo lower than 1 MB...');
       }
+      else if (code === "INVALID_FILE_TYPE") {
+        setError('File type is not supported for profile photo! File type should be .jpg, .jpeg or .png');
+      }
       else {
         setError('Something went wrong. Please try again later!');
       }
@@ -98,6 +101,7 @@ function Signup() {
   const handleFileSelect = (e) => {
     setSelectedFiles(e.target.files)
     setFileSelectError('')
+    setProgress(null);
     setError('')
   }
 

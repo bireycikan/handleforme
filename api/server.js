@@ -77,6 +77,9 @@ app.use(function (err, req, res, next) {
     if (err.message === "FILE_MISSING") {
       res.status(400).send({ code: "FILE_MISSING" })
     }
+    else if (err.message === "INVALID_FILE_TYPE") {
+      res.status(400).send({ code: "INVALID_FILE_TYPE" })
+    }
     else {
       res.status(500).send({ code: "SERVER_ERROR", message: err.message || 'Something failed!' })
     }

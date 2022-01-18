@@ -18,6 +18,14 @@ const upload = multer({
   limits: {
     fileSize: 1024 * 1024, // 1 MB
   },
+  fileFilter: function (req, file, cb) {
+    if (file.mimetype === "image/jpg" || file.mimetype === "image/png" || file.mimetype === "image/jpeg") {
+      cb(null, true)
+    }
+    else {
+      cb(new Error("INVALID_FILE_TYPE"), false);
+    }
+  }
 })
 
 module.exports = upload
