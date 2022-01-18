@@ -22,6 +22,12 @@ SESSION_KEY=<session_key>
 SESSION_SECRET=<session_secret>
 ```
 
+> Other informations you have to write into .env file
+
+```
+VITE_AXIOS_BASE_URL=http://localhost:5000
+```
+
 ### Start project
 
 ```
