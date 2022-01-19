@@ -30,6 +30,14 @@ VITE_AXIOS_BASE_URL=http://localhost:5000
 
 ### Start project
 
+> Install dependencies
+
+```
+npm install
+```
+
+> Run dev server
+
 ```
 npm run dev
 ```
