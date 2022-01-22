@@ -19,7 +19,7 @@ const redisClient = redis.createClient({
 
 redisClient.on('error', (err) => {
   if (err.code === "ECONNREFUSED") {
-    console.log('Redis connection dropped. Check your redis service and credentials.');
+    console.log('Redis connection failed. Check your redis service and credentials.');
   }
 })
 
